@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Idiots</title>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<style type="text/css">
+
+	footer{
+		position:fixed;
+	    bottom:0;
+	    left:0;
+	    height:50px;
+	    width: 100%;
+	    background: black;
+
+	}
+
+	body{
+		background-image: url("images.jpg");
+		background-attachment: fixed;
+		background-size: cover;
+
+	}
+
+	.middle {
+		color: white;
+	    position: absolute;
+	    top: 30%;
+	    left: 50%;
+	    bottom: 50%;
+	    transform: translate(-50%, -50%);
+	    text-align: center;
+	    font-family: Arial;
+	    font-size: 100px
+	}
+
+	hr{
+		width: 100px
+		margin: auto;
+	}
+
+	#nama{
+		color: white;
+		font-size: 40px;
+		padding-left:2px;
+		padding-right:2px;
+		float:left;
+		margin-top:4px;
+		margin-right:8px;
+		font-family: Nasalization;
+	}
+	</style>
+
+
+
+	<body>
+		<header>
+			<nav class="navbar navbar-fixed-top navbar-inverse bg-faded">
+				<div class="container-fluid">
+					<div id="nama">
+						<h2>TI</h2>
+					</div>
+				</div>
+				
+
+			</nav>
+			<div class="TI">
+	   		<div class="container">
+	   			<div class="middle">
+		   			<h1 style="font-size: 70px;">COMING SOON</h1>
+		   			<hr>
+		   			<p id="demo" style="font-size:30px"></p>
+	   			</div>	
+	   		</div>
+	   			
+	 	  </div>
+
+		</header>
+
+
+		<script type="text/javascript">
+			var countDownDate = new Date("August 9, 2017 15:44:00").getTime();
+
+		// Update the count down every 1 second
+			var countdownfunction = setInterval(function() {
+
+			    // Get todays date and time
+			    var now = new Date().getTime();
+			    
+			    // Find the distance between now an the count down date
+			    var distance = countDownDate - now;
+			    
+			    // Time calculations for days, hours, minutes and seconds
+			    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			    
+			    // Output the result in an element with id="demo"
+			    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+			    + minutes + "m " + seconds + "s ";
+			    
+			    // If the count down is over, write some text 
+			    if (distance < 0) {
+			        clearInterval(countdownfunction);
+			        document.getElementById("demo").innerHTML = "EXPIRED";
+			    }
+			}, 1000);
+
+		</script>
+
+
+		<footer>
+		   		<h5 style="text-align: center; color: white;">&copy 2017. TI Developer</h5>
+		</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="js/bootstrap.min.js"></script>
+	</body>
+
+	
+</html>
